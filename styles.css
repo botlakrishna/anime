@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  padding: 20px;
+  width: 30px;
+}
+
+h3 {
+  font-family: "Marck Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+.container {
+  background-color: lightgoldenrodyellow;
+  width: 100vw;/
+  /* height: 100vh; */
+  position: relative;
+
+}
+.section_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.section_2 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+
+  /* height: 60vh; */
+  
+}
+
+.image,
+.imgg{
+  opacity: 0.8;
+  padding: 3.5px;
+ 
+ 
+  /* width: 10vw; */
+  /* position: relative; */
+
+
+}
+.video {
+  display:none ;
+  align-self: self-start;
+  width: 200px;
+  height: 450px;
+  position: absolute;
+  top: 100px;
+  left: 285px;
+
+  object-fit: fill;
+}
+.containerr .image {
+  transition: opacity 0.3s ease-in-out;
+}
+.containerr:hover .image {
+  display: none;
+}
+.containerr:hover .video {
+  display: block;
+}
+img {
+  /* display: inline-flex; */
+  
+  width: 200px;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+  padding: 5px;
+  margin: 0;
+  
+}
+
+
+.section_3 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.section_31 {
+  padding: 8px;
+}
+
+
+ /* Overlay to fade the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: lightgoldenrodyellow(232, 232, 190, 0.01); */
+  background-color: rgba(220, 220, 200, 0.748); 
+  display: none; 
+  z-index: 999; 
+  
+}
+
+
+
+.menu_1{
+  
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.menu_2{
+  padding-top: 80px;
+  padding-bottom: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+.menu {
+  background-color: black;
+  font-family: 'Clearface ITC W01', Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: -100%; /* Start off-screen */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+  opacity: 0; /* Start invisible */
+  transition: all 0.9s ease; /* Smooth transition */
+}
+
+.menu.show {
+  top: 0; /* Drop into view */
+  opacity: 1; /* Make visible */
+}
+
+
+
+.menu_1 h1 {
+  font-size: 36px;
+  margin: 0;
+  color: white;
+}
+
+
+.menu_2 h2 {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 20px;
+  color: white;
+  transition: color 0.9s ease;
+}
+
+.menu_2 h2:hover {
+  color: lightgoldenrodyellow;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+} */
+
+.container {
+  display: flex;
+  gap: 9px;
+  overflow: hidden;
+  /* overflow: visible; */
+  width: 200vh; 
+  max-width: 1200px; 
+  /* align-items: flex-end; */
+}
+
+.media-card {
+  flex: 1; 
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.3s ease, transform 0.3s ease;
+}
+
+/* .media-card:nth-child(odd) {
+  transform: translateY(50px);
+} */
+
+.media-card:hover {
+  flex: 3;  
+  transform: translate(-25%, 0%), scale(2);  
+}
+
+.media-card img {
+  width: 150%;
+  height: 70vh;
+  object-fit: cover;
+  /* object-fit: fill; */
+  transition: opacity 0.3s ease;
+}
+
+.media-card video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* overflow: visible; */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.media-card:hover img {
+  opacity: 0;  
+}
+.media-card:hover video {
+  opacity: 1; 
+  /* pointer-events: auto; */
+}
